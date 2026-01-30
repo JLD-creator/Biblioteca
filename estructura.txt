@@ -1,0 +1,16 @@
+biblioteca/
+│
+├── index.html        ← Pantalla de login
+├── catalogo.html     ← Pantalla de catálogo de libros
+├── libro.html        ← Detalle de libro
+├── prestamos.html    ← Mis préstamos
+├── admin.html        ← Panel de administrador
+├── css/
+│   └── styles.css    ← Estilos
+└── js/
+    ├── data.js       ← Gestión de datos (localStorage)
+    ├── auth.js       ← Gestión de sesión y roles
+    ├── catalogo.js   ← Mostrar libros
+    ├── prestamos.js  ← Gestión de préstamos
+    ├── admin.js      ← CRUD de libros y usuarios
+    └── utils.js      ← Funciones auxiliares
