@@ -22,8 +22,24 @@ const inicialDB = {
         }
     ],
     libros: [
-        { id: 101, titulo: "El Quijote", autor: "Cervantes", stock: 5, img: "quijote.jpg" },
-        { id: 102, titulo: "1984", autor: "George Orwell", stock: 2, img: "1984.jpg" }
+       { 
+            id: 101, 
+            titulo: "El Quijote", 
+            autor: "Miguel de Cervantes", 
+            genero: "Clásico",
+            stock: 5, 
+            img: "Quijote.jpeg",
+            descripcion: "La historia del ingenioso hidalgo Don Quijote de la Mancha."
+        },
+        { 
+            id: 102, 
+            titulo: "Cien años de soledad", 
+            autor: "Gabriel García Márquez", 
+            genero: "Realismo Mágico",
+            stock: 2, 
+            img: "cien.jpeg",
+            descripcion: "La saga de la familia Buendía en el pueblo de Macondo."
+        }
     ],
     prestamos: []
 };

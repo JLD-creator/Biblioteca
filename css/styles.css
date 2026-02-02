@@ -128,3 +128,152 @@ nav a.active {
     background-color: #fffaf2;
     color: #6b4f2c;
 }
+/* Contenedor principal del catálogo */
+.catalogo {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Asegura el buscador arriba y libros abajo */
+    align-items: center;
+}
+
+/* ===== SECCIÓN BUSCADOR (ARRIBA) ===== */
+.buscador {
+    display: flex;             
+    justify-content: center;   
+    align-items: center;
+    gap: 10px;                 
+    margin-bottom: 40px;       
+    width: 100%;
+}
+
+.buscador input {
+    flex: 1;                   
+    max-width: 500px;          
+    padding: 12px;
+    border: 1px solid #b8a97a;
+    border-radius: 4px;
+    font-family: inherit;
+    background-color: #fdfcf8;
+}
+
+.buscador button {
+    width: auto; /* Anula el width: 100% de los botones generales si fuera necesario */
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #6b4f2c;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.buscador button:hover {
+    background-color: #8b6f47;
+}
+
+/* ===== GRID DE LIBROS (ABAJO) ===== */
+.libros {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+/* Tarjetas de libro */
+.libro {
+    background-color: #fffaf2;
+    border: 1px solid #c2b280;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.libro:hover {
+    transform: translateY(-5px);
+}
+
+.libro img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.libro h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #4a3621;
+}
+
+.libro p {
+    font-size: 15px;
+    color: #7a6a53;
+    margin-bottom: 8px;
+}
+
+.libro span {
+    display: inline-block;
+    font-size: 12px;
+    padding: 4px 10px;
+    background-color: #f4f1ea;
+    border: 1px solid #dcd7c9;
+    border-radius: 12px;
+    color: #6b4f2c;
+    margin-bottom: 15px;
+}
+
+.libro button {
+    width: 100%;
+    padding: 10px;
+    background-color: #c2b280;
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.libro button:hover {
+    background-color: #b8a97a;
+}
+
+/* Ajustes para móviles */
+@media (max-width: 650px) {
+    .buscador {
+        flex-direction: column;
+    }
+    .buscador input {
+        width: 100%;
+    }
+    .libros {
+        grid-template-columns: 1fr;
+    }
+}
+/* Estilo para el botón de enlace */
+.boton-ver {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #c2b280; /* Dorado viejo */
+    color: white;
+    text-align: center;
+    text-decoration: none; /* Quita el subrayado del enlace */
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton-ver:hover {
+    background-color: #a89968;
+    transform: scale(1.02);
+}
+
+.boton-ver:active {
+    transform: scale(0.98);
+}
