@@ -1,6 +1,7 @@
 biblioteca/
 │
-├── index.html        ← Pantalla de login
+├── signup.html       ← Pantalla de singup 
+├── login.html        ← Pantalla de login
 ├── catalogo.html     ← Pantalla de catálogo de libros
 ├── libro.html        ← Detalle de libro
 ├── prestamos.html    ← Mis préstamos
