@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Libro - Biblioteca Dúo J</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        .detalle-container {
+            display: flex; gap: 40px; background: #fffaf2; padding: 30px;
+            border-radius: 8px; border: 2px solid #c2b280;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15); max-width: 900px; margin: 40px auto;
+        }
+        .detalle-img { width: 300px; border-radius: 4px; box-shadow: 5px 5px 15px rgba(0,0,0,0.3); }
+        .info { flex: 1; }
+        .info h2 { color: #6b4f2c; border-bottom: 2px solid #c2b280; padding-bottom: 10px; }
+        .sinopsis { margin: 20px 0; line-height: 1.8; color: #4a3f35; }
+        .volver { display: inline-block; margin-top: 20px; color: #6b4f2c; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header><h1>Biblioteca Dúo J</h1></header>
+
+    <main class="catalogo">
+        <div class="detalle-container">
+            <img id="libro-img" src="" alt="Portada" class="detalle-img">
+            <div class="info">
+                <h2 id="libro-titulo">Cargando...</h2>
+                <p><strong>Autor:</strong> <span id="libro-autor"></span></p>
+                <p><strong>Género:</strong> <span id="libro-genero"></span></p>
+                <p><strong>Stock:</strong> <span id="libro-stock"></span> unidades</p>
+                <div class="sinopsis" id="libro-desc"></div>
+                <a href="/html/catalogo.html" class="volver">← Volver al catálogo</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="/js/data.js"></script>
+    <script src="/js/catalogo.js"></script>
+</body>
+</html>
