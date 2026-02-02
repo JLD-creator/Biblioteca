@@ -1,0 +1,95 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+    font-family: "Georgia", serif;
+    background-color: #f4f1ea;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #6b4f2c; /* madera */
+    color: #fffaf2;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #4a3621;
+}
+
+header h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== FORMULARIO ===== */
+form {
+    background-color: #fffaf2;
+    border: 2px solid #c2b280;
+    padding: 30px;
+    width: 320px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #4a3f35;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: 1px solid #b8a97a;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: #fdfcf8;
+}
+
+input:focus {
+    outline: none;
+    border-color: #8b6f47;
+    box-shadow: 0 0 5px rgba(139, 111, 71, 0.6);
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6b4f2c;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a4022;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #4a3621;
+    color: #fffaf2;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
+}
