@@ -2,9 +2,9 @@ window.onload = function() {
             const params = new URLSearchParams(window.location.search);
             const idBuscado = parseInt(params.get('id'));
             
-            // Usamos la función de tu main.js
+            // Usamos la función del data.js
             const libros = obtenerLibros();
-            const libro = libros.find(l => l.id === idBuscado);
+            const libro = libros.find(l => l.id == idBuscado);
 
             if (libro) {
                 document.getElementById('libro-titulo').innerText = libro.titulo;
