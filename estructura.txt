@@ -1,6 +1,5 @@
 biblioteca/
 │
-├── signup.html       ← Pantalla de singup 
 ├── login.html        ← Pantalla de login
 ├── catalogo.html     ← Pantalla de catálogo de libros
 ├── libro.html        ← Detalle de libro
@@ -14,4 +13,3 @@ biblioteca/
     ├── catalogo.js   ← Mostrar libros
     ├── prestamos.js  ← Gestión de préstamos
     ├── admin.js      ← CRUD de libros y usuarios
-    └── utils.js      ← Funciones auxiliares

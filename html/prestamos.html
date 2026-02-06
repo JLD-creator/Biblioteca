@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Préstamos - Biblioteca Dúo J</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Biblioteca Dúo J</h1>
+        <h2>Gestión de Préstamos</h2>
+        <nav>
+            <ul>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="prestamos.html" class="active">Préstamos</a></li>
+                <li><a href="admin.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="prestamos">
+
+        <!-- NUEVO PRÉSTAMO -->
+        <section class="form-prestamo">
+            <h3>Nuevo préstamo</h3>
+
+            <label>Usuario</label>
+            <select id="usuario"></select>
+
+            <label>Libro</label>
+            <select id="libro"></select>
+
+            <button onclick="registrarPrestamo()">Prestar</button>
+        </section>
+
+        <!-- PRÉSTAMOS ACTIVOS -->
+        <section class="lista-prestamos">
+            <h3>Préstamos activos</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Usuario</th>
+                        <th>Libro</th>
+                        <th>Fecha préstamo</th>
+                        <th>Fecha devolución</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaPrestamos"></tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Biblioteca Dúo J</p>
+    </footer>
+
+    <script src="/js/data.js"></script>
+    <script src="/js/prestamos.js"></script>
+    <script src="/js/logout.js"></script>
+
+</body>
+
+</html>

@@ -1,39 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="/css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 
-    <header>
-        <h1> Biblioteca Dúo J </h1>
-        <p>Login</p>
-        <nav>
-        <ul>
-            <li><a href="/html/login.html" class="active">Login</a></li>
-            <li><a href="/html/signup.html">Signup</a></li>
-        </ul>
-    </nav>
-    </header>
+<header>
+    <h1> Biblioteca Dúo J </h1>
+    <p>Login</p>
+</header>
 
-    <main>
-        <form method="post">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre">
+<main>
+    <form id="loginForm">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
 
-            <label for="password">Contraseña</label>
-            <input type="password" id="password" name="password">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" required>
 
-            <button type="submit">Ingresar</button>
-        </form>
-    </main>
+        <button type="submit">Ingresar</button>
+    </form>
+</main>
 
-    <footer>
-        <p>&copy; 2026 Biblioteca Dúo J — Todos los derechos reservados</p>
-    </footer>
+<footer>
+    <p>&copy; 2026 Biblioteca Dúo J</p>
+</footer>
+
+<script src="/js/auth.js"></script>
 
 </body>
 </html>

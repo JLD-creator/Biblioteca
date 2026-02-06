@@ -277,3 +277,33 @@ nav a.active {
 .boton-ver:active {
     transform: scale(0.98);
 }
+/* Botón de cerrar sesión en el nav */
+#logoutBtn {
+    background-color: transparent;
+    border: none;
+    color: #fffaf2;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 6px 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+    font-family: inherit;
+}
+
+#logoutBtn:hover {
+    background-color: #8b6f47;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+#logoutBtn:active {
+    transform: scale(0.95);
+}
+
+/* Ajuste para que se vea como los enlaces del nav */
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+}
+
