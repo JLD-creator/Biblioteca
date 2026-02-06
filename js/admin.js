@@ -42,20 +42,45 @@ function agregarLibro() {
     const db = obtenerDB();
     const section = document.querySelectorAll("section")[1];
     const inputs = section.querySelectorAll("input, textarea");
-    const nuevoLibro = {
-        id: Date.now(),
-        titulo: inputs[0].value,
-        autor: inputs[1].value,
-        genero: inputs[2].value,
-        stock: parseInt(inputs[3].value),
-        img: inputs[4].value,
-        descripcion: inputs[5].value
+
+    const fileInput = inputs[4]; 
+    const file = fileInput.files[0];
+
+    if (!file) {
+        alert("Debes seleccionar una imagen");
+        return;
+    }
+
+    if (!file.type.startsWith("image/")) {
+        alert("Solo se permiten imágenes");
+        return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const nuevoLibro = {
+            id: Date.now(),
+            titulo: inputs[0].value,
+            autor: inputs[1].value,
+            genero: inputs[2].value,
+            stock: parseInt(inputs[3].value),
+            img: file.name, // Guardamos el nombre del archivo
+            descripcion: inputs[5].value
+        };
+
+        db.libros.push(nuevoLibro);
+        guardarDB(db);
+
+
+        localStorage.setItem("img_" + file.name, e.target.result);
+
+        cargarLibros();
+        inputs.forEach(i => i.value = "");
+        alert("Libro agregado correctamente");
     };
-    db.libros.push(nuevoLibro);
-    guardarDB(db);
-    cargarLibros();
-    inputs.forEach(i => i.value = "");
+    reader.readAsDataURL(file);
 }
+
 
 function eliminarLibro(id) {
     const db = obtenerDB();

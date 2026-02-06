@@ -56,7 +56,9 @@ label {
 
 input[type="text"],
 input[type="password"],
-input[type="email"] {
+input[type="email"],
+input[type="number"],
+input[type="file"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 18px;
@@ -159,7 +161,7 @@ nav a.active {
 }
 
 .buscador button {
-    width: auto; /* Anula el width: 100% de los botones generales si fuera necesario */
+    width: auto;
     padding: 10px 20px;
     cursor: pointer;
     background-color: #6b4f2c;
@@ -306,4 +308,5 @@ nav ul li {
     display: inline-block;
     margin-left: 10px;
 }
+
 

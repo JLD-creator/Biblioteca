@@ -1,127 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Admin - Biblioteca Dúo J</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Biblioteca Dúo J</h1>
-    <nav>
-        <ul>
-            <li><a href="catalogo.html">Catálogo</a></li>
-            <li><a href="prestamos.html">Préstamos</a></li>
-            <li><a href="admin.html" class="active">Admin</a></li>
-            <li><button id="logoutBtn">Cerrar sesión</button></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <h1>Biblioteca Dúo J</h1>
+        <nav>
+            <ul>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="prestamos.html">Préstamos</a></li>
+                <li><a href="admin.html" class="active">Admin</a></li>
+                <li><a href="login.html" id="logoutBtn">Cerrar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main>
-    <div class="catalogo">
+    <main>
+        <div class="catalogo">
 
-        <!-- CONFIGURACIÓN -->
-        <section class="libro">
-            <h3>Configuración general</h3>
+            <!-- CONFIGURACIÓN -->
+            <section class="libro">
+                <h3>Configuración general</h3>
 
-            <label>Máx. libros por usuario</label>
-            <input type="number" id="maxLibros">
+                <label>Máx. libros por usuario</label>
+                <input type="number" id="maxLibros">
 
-            <label>Días de préstamo</label>
-            <input type="number" id="diasPrestamo">
+                <label>Días de préstamo</label>
+                <input type="number" id="diasPrestamo">
 
-            <label>Días de sanción</label>
-            <input type="number" id="sancionDias">
+                <label>Días de sanción</label>
+                <input type="number" id="sancionDias">
 
-            <a href="#" class="boton-ver">Guardar configuración</a>
-        </section>
+                <a href="#" class="boton-ver">Guardar configuración</a>
+            </section>
 
-        <!-- GESTIÓN LIBROS -->
-        <section class="libro">
-            <h3>Gestión de libros</h3>
+            <!-- GESTIÓN LIBROS -->
+            <section class="libro">
+                <h3>Gestión de libros</h3>
 
-            <input type="text" placeholder="Título">
-            <input type="text" placeholder="Autor">
-            <input type="text" placeholder="Género">
-            <input type="number" placeholder="Stock">
-            <input type="text" placeholder="Imagen">
-            <textarea placeholder="Descripción"
-                style="width:100%; padding:10px; margin-bottom:15px;"></textarea>
+                <input type="text" placeholder="Título">
+                <input type="text" placeholder="Autor">
+                <input type="text" placeholder="Género">
+                <input type="number" placeholder="Stock">
+                <input type="file" accept="image/*" placeholder="Imagen">
+                <textarea placeholder="Descripción" style="width:100%; padding:10px; margin-bottom:15px;"></textarea>
 
-            <a href="#" class="boton-ver">Añadir libro</a>
-        </section>
+                <a href="#" class="boton-ver">Añadir libro</a>
+            </section>
 
-        <!-- LISTA LIBROS -->
-        <section class="libro">
-            <h3>Libros existentes</h3>
+            <!-- LISTA LIBROS -->
+            <section class="libro">
+                <h3>Libros existentes</h3>
 
-            <table style="width:100%; border-collapse:collapse;">
-                <thead>
-                    <tr style="border-bottom:1px solid #c2b280;">
-                        <th>Título</th>
-                        <th>Stock</th>
-                        <th>Acción</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>El Quijote</td>
-                        <td>5</td>
-                        <td><a href="#" class="boton-ver">Editar</a></td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+                <table>
+                    <thead>
+                        <tr style="border-bottom:1px solid #c2b280;">
+                            <th>Título</th>
+                            <th>Stock</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>El Quijote</td>
+                            <td>5</td>
+                            <td><a href="#" class="boton-ver">Editar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-        <!-- GESTIÓN USUARIOS -->
-        <section class="libro">
-            <h3>Gestión de usuarios</h3>
+            <!-- GESTIÓN USUARIOS -->
+            <section class="libro">
+                <h3>Gestión de usuarios</h3>
 
-            <input type="text" placeholder="Usuario">
-            <input type="password" placeholder="Contraseña">
+                <input type="text" placeholder="Usuario">
+                <input type="password" placeholder="Contraseña">
 
-            <select style="width:100%; padding:10px; margin-bottom:15px;">
-                <option value="user">Usuario</option>
-                <option value="admin">Admin</option>
-            </select>
+                <select style="width:100%; padding:10px; margin-bottom:15px;">
+                    <option value="user">Usuario</option>
+                    <option value="admin">Admin</option>
+                </select>
 
-            <a href="#" class="boton-ver">Crear usuario</a>
-        </section>
+                <a href="#" class="boton-ver">Crear usuario</a>
+            </section>
 
-        <!-- USUARIOS -->
-        <section class="libro">
-            <h3>Usuarios</h3>
+            <!-- USUARIOS -->
+            <section class="libro">
+                <h3>Usuarios</h3>
 
-            <table style="width:100%; border-collapse:collapse;">
-                <thead>
-                    <tr style="border-bottom:1px solid #c2b280;">
-                        <th>Usuario</th>
-                        <th>Rol</th>
-                        <th>Penalización</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>user</td>
-                        <td>Usuario</td>
-                        <td>—</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-    </div>
-</main>
+                <table>
+                    <thead>
+                        <tr style="border-bottom:1px solid #c2b280;">
+                            <th>Usuario</th>
+                            <th>Rol</th>
+                            <th>Penalización</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>user</td>
+                            <td>Usuario</td>
+                            <td>—</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
 
-<footer>
-    <p>&copy; 2026 Biblioteca Dúo J</p>
-</footer>
+    <footer>
+        <p>&copy; 2026 Biblioteca Dúo J</p>
+    </footer>
 
-<script src="/js/data.js"></script>
-<script src="/js/admin.js"></script>
-<script src="/js/logout.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="/js/admin.js"></script>
+    <script src="/js/logout.js"></script>
 
 </body>
+
 </html>
